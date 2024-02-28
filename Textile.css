@@ -1,0 +1,511 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            text-decoration: none;
+            
+            transition: .2s ease;
+        }
+        .header{
+            display: flex;
+            padding: 1rem;
+            background: rgb(8, 8, 8);
+            color: white;
+            column-gap: 20rem; 
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);    
+            border-bottom: 2px solid rgb(224, 16, 16);      
+        }
+        .header .logo p{
+            font-size: 1.5rem;
+            color: rgb(224, 16, 16);
+        }
+        .header .logo a i{
+            font-size: 1.2rem;
+            margin-right: 0.5rem;
+            margin-top: 0.3rem;
+            color: rgb(224, 16, 16);
+            
+        }
+        .logo{
+            display: flex;
+        }
+
+        .header .navbar a{
+            margin-right: 2rem;
+            margin-bottom: 1rem;
+            font-size: 1rem;
+            color: white;
+            font-family: "Playfair Display", serif;
+        }
+        .header .navbar a:hover{
+            color:rgb(224, 16, 16);         
+        }
+        .header .navbar a i{
+            margin-right: .5rem;
+            margin-top: .5rem;
+            font-size: 1rem;
+            color: rgb(224, 16, 16);
+        }
+        .menu{
+            display: none;
+        }
+        
+     @media(max-width: 944px){
+        .header{
+            font-size: 0.5rem;
+            
+            column-gap: 15rem; 
+        }
+        
+       
+     }
+     @media(max-width: 771px){
+        .header{
+            font-size: 0.5rem;
+            
+            column-gap: 10rem; 
+        }
+        .box{
+            margin-left: 10%;
+        }
+     }
+     @media(max-width: 694px){
+        .header{
+            font-size: 0.5rem;
+            
+            column-gap: 5rem; 
+        }
+        .box{
+            margin-left: 5%;
+        }
+     }
+     @media(max-width: 610px){
+        
+        .navbar{
+            position: fixed;  /* position fixed krny ka bad hi top or left right bottom ko use kia ja skta ha ------wja se ye header se detach ho ga */
+            color: rgb(201, 15, 15);
+            border-radius: 5px;
+            width: 200px;                      
+            height:15rem;
+            border-top: 2px solid rgb(78, 75, 75);
+            top: 12%; 
+            right:.4%;    
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);          
+            background: black;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateX(100%);
+            transition: all .5s linear;
+            z-index: 20;
+        }
+        .navbar a{
+            display: block;
+            margin-left: 2rem;
+            margin-top: 2rem;
+            color: black;
+        }
+        .menu{
+            display: block;
+            font-size: 1.5rem;
+            margin-top: 0.3rem;
+            color: rgb(201, 15, 15);
+            cursor: pointer;
+            z-index: 1000;
+        }
+        .menuicon, .crossicon{
+            position: fixed;
+            border-radius: 50%;
+            background: black;
+            padding: .4rem;
+            right: 5%;
+        }
+        .crossicon
+        {
+            display: none;
+        }
+        .active  .navbar{
+            transform: translateX(0%);
+            opacity: 1;
+            visibility: visible;
+        }
+        .active .crossicon{
+            display: block;
+        }
+        .active  .menuicon{
+            display: none
+        }
+        .box{
+            margin-left: 5%;
+        }
+        .background .container .name .content{
+         
+          margin-right: 25rem;
+         
+         font-size: 1rem;
+         font-weight: 1000;
+        }
+        /* --------------------------------media query code of home---------------------------------------- */
+        .background .container .name h1{
+         font-size: 1rem;
+         
+        }
+        .background .container .name{
+         font-size: 1.3rem;
+         
+        }
+       
+        
+     }
+    /*  @media(max-width: 856px){
+        .work{
+            height: 730vh;
+        }
+     }  */
+    /*  .background{
+        background: red;
+        
+        
+     } */
+    
+   .background{
+   
+    background-image: url(bg1.jpg);
+   
+    height: 100vh;
+    width: 100%;
+    animation: change 10s infinite;
+    
+   }
+   @keyframes change {
+    0% {
+        background-image: url(bg1.jpg);
+    }
+    20% {
+        background-image: url(bg1.jpg);
+    } 
+    40% {
+        background-image: url(bg3.jpg);
+    }
+    60% {
+        background-image: url(bg4.jpg);
+    }
+    80% {
+        background-image: url(bg5.jpg);
+    }
+    100% {
+        background-image: url(bg6.jpg);
+    }
+}
+
+
+
+/* ---------------------------------Home section -------------------------------------- */
+.background .container{
+    display: grid;
+    color: white;
+   justify-content: center;
+}
+.background .container .name h1{
+  margin-top: 9rem;
+  
+  background: linear-gradient(to bottom, #d7487e,#ea6360,#6070ea); 
+ -webkit-background-clip: text;
+ -webkit-text-fill-color: transparent;
+ font-size: 2.5rem;
+ font-weight: 1000;
+ z-index: 1000;
+}
+.background .container .frontcontent{
+    margin-top: 2rem;
+ 
+  font-size: 1rem;
+  line-height: 2rem;
+
+}
+.button i{
+            border-radius: 50%;
+            margin-left: 8rem;
+            margin-top: 1.5rem;
+            background: rgb(13, 13, 127);
+            cursor: pointer;
+            color:rgb(224, 16, 16);
+            padding: 1rem;
+            border: 2px solid black;
+           
+        }
+
+/* -------------------------------Linkage of navbar with javascript----------------------------------- */
+.name{
+     transform: translateY(-70px);
+     transition: 2s;
+    
+}
+.frontcontent{
+    transform: translateY(200px);
+    opacity: 0;
+    transition: 2s;
+}
+.button{
+    transform: translate(-600px);
+    transition: 2s;
+
+}
+.image-container .box img
+{ 
+    transition: .5s;
+    width: 200px;
+    height: 250px;
+    border-radius: .5rem;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); 
+    cursor: pointer;
+    border: 2px solid black;
+}
+.image-container 
+{
+    display: flex;
+    max-width: 1200px;
+    width: 100%;
+    flex-wrap: wrap;
+    column-gap: 2rem;
+    row-gap: 2rem;
+    justify-content: center;
+    margin-top: 5rem;
+   
+}
+.image-container .box
+{
+   padding-top: 2rem;
+   padding-left: 2rem;
+   padding-right: 2rem;
+   padding-bottom: 1rem;
+   background: linear-gradient(90deg, rgb(12, 5, 6) 0%, rgba(31,21,24,1) 50%, rgb(35, 10, 4) 100%);
+   border-radius: .5rem;
+   
+   position: relative;
+}
+.work{
+   background: rgb(104, 104, 106);
+  
+   
+   border-top: 5px solid black;
+   
+}
+
+.bottomborder{
+    border-bottom: 5px solid black;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);          
+}
+.image-container .box i{
+    color: rgb(229, 221, 222);
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 700px;
+    margin-top: .2rem;
+    border-radius: 50%;
+    padding: .4rem;
+    margin-left: 1rem;
+    margin-top: .5rem;
+    background: #0b0306;
+}
+.image-container .box p{
+    color: white;
+    font-size: 1rem;
+    background: none;
+    margin-left: 1rem;
+}
+.work h3
+
+
+{
+    color: rgb(15, 13, 13);
+    text-align: center;
+    font-weight: 900;
+    font-size: 2rem;
+    margin-top: 2rem;
+   text-decoration: underline;
+}
+img{
+    display: block;
+}
+.content{
+    
+    top: 20%;
+    left: -100%;
+    position: absolute;
+    background: black;
+    display: flex;
+    width: 100%;
+    opacity: 0;
+    justify-content: center;
+    color: white;
+    align-items: center;
+    flex-direction: column;
+    transition: .8s;
+    overflow: hidden;
+    margin: 10px auto;
+    
+}
+.box:hover .content{
+    opacity: 1;
+    left:0;
+}
+.image-container .box .content h3{
+    font-size: 2rem;
+    color: white;
+}
+.image-container .box .content p{
+    font-size: 1rem;
+    color: white;
+}
+ 
+.footer{
+    display: flex;
+    background: rgb(46, 45, 45);
+    flex-wrap: wrap;
+   border-top: 3px solid black;
+   justify-content: center;   
+   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.contact{
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 2rem;
+    row-gap: 2rem;
+    margin: 2rem;
+    
+        
+}
+.paragraph{
+    color: white;
+}
+.footerheading{
+    color: white;
+    font-weight: 700;
+    font-size: 2rem;
+    text-align: center;
+    align-items: center;
+}
+.para{
+    font-size: 1rem;
+    align-items: center;
+    text-align: center;
+    padding:1rem;
+
+}
+
+.footerimage{
+    border-radius: 50%;;
+    border: 2px solid black;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.footer2{
+    display: flex;
+    align-items: center;
+   justify-content: center;
+   column-gap: 2rem;
+   background: #0b0306;
+   border-top: 2px solid black;
+   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+   padding: 1rem;
+
+}
+.sidra{
+    color: white;
+    font-size: 1.5rem;
+}
+.sidra span{
+    color:red;
+    font-size: 1.3rem;
+}
+.beforefooter{
+    padding: 5rem;
+    background: rgb(104, 104, 106);
+}
+@media (max-width: 360px){
+    .sidra{
+        font-size: 1rem;
+    }
+    .sidra span{
+        font-size: .8rem;
+    }
+    .footer2{
+        column-gap: 1rem;
+    }
+    .contact{
+        margin-left: 3rem;
+    }
+    .background .container .name{
+        margin-left: 2rem;
+    }
+    .background .container .frontcontent{
+        margin-left: 2rem;
+    }
+}
+
+/* ----------------------------------Experience ------------------------------------ */
+.experience .experiencecontainer .experiencebox .experienceimage{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+.experience{
+    background:#051165;
+    padding: 6rem 1rem;
+    border-top: 2px solid rgb(20, 20, 61);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    
+}
+.experience .experiencecontainer{
+   display: grid;
+   grid-template-columns: repeat(auto-fit,minmax(270px,1fr));
+   gap:15px;
+   line-height: 1.5rem;
+}
+.experience .experiencecontainer .experiencebox{
+    padding: 30px 20px;
+    text-align: center;
+    background: linear-gradient(90deg, rgba(211,94,74,1) 14%, rgba(149,81,102,1) 49%, rgba(179,91,145,1) 100%);
+    border-radius: 5px;
+    border: 2px solid black;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    cursor: pointer;
+    margin: 1rem;
+    transition: .4s;
+}
+.experience .experienceheading{
+    font-size: 2rem;
+    font-weight: 700;
+    color: rgb(237, 229, 229);
+    text-align: center;
+    margin-bottom: 2rem;
+}
+.experience .experiencecontainer .experiencebox .companyname{
+    font-size: 1.5rem;
+    font-weight: 700;
+    border: 2px solid black;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    
+    background: rgb(3, 22, 86);
+    color: white;
+    border-radius: 10%;
+}
+.experience .experiencecontainer .experiencebox p{
+    font-size: 1rem;
+   
+}
+.experience .experiencecontainer .experiencebox:hover{    
+     transform: scale(1.1);
+     background: linear-gradient(90deg, rgb(42, 60, 227) 14%, rgb(82, 89, 220) 49%, rgb(110, 164, 183) 100%);
+}
+.experience  .experiencecontainer .experiencebox .iconwithloc{
+    display: flex;
+}
+.experience  .experiencecontainer .experiencebox .loc{
+    font-weight: 700;
+    font-size: 1.3rem;
+    margin-right: 0.5rem;
+}
+.time{
+    margin-top: 2rem;
+}
